@@ -3,6 +3,7 @@
 Yet another JSON Generator
 
 A GUI scaffolding tool that let's you generate boilerplate for things like:
+
 - Generating dummy data, like API endpoints
   - Built-in faker.js support lmao
 - Scaffolding project details, stuff like package.json
@@ -13,6 +14,7 @@ You can use the tool on its own, or use the pre-made templates or make your
 own template to make things easier!
 
 Template(s) plan to add:
+
 - package.json
 - Minimal VSCode Theme Plugin
 - Random data

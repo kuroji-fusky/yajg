@@ -1,11 +1,11 @@
 <script lang="ts">
-	import '../app.scss';
-	import { page } from '$app/stores';
-	import Navbar from '../components/Navbar.svelte';
+	import '../app.scss'
+	import { page } from '$app/stores'
+	import Navbar from '../components/Navbar.svelte'
 
-	const t = 'Yet another JSON Generator';
-	const d = 'Generate JSON shit';
-	const url = `${$page.url.origin}${$page.url.pathname}`;
+	const t = 'Yet another JSON Generator'
+	const d = 'Generate JSON shit'
+	const url = `${$page.url.origin}${$page.url.pathname}`
 </script>
 
 <svelte:head>

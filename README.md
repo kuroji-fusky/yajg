@@ -3,7 +3,8 @@
 Yet another JSON Generator
 
 A GUI scaffolding tool that let's you generate boilerplate for things like:
-- Generating dummy data, built-in faker.js support lmao
+- Generating dummy data, like API endpoints
+  - Built-in faker.js support lmao
 - Scaffolding project details, stuff like package.json
 - Adding i18n functionality
 - PWA

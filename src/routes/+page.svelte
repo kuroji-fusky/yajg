@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="w-screen flex gap-2">
+  <div class="block-sidebar">
+    Component blocks here
+  </div>
+  <div class="code-wrapper">CodeMirror here</div>
+</div>

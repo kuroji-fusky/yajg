@@ -1,38 +1,25 @@
-# create-svelte
+# YAJG
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Yet another JSON Generator
 
-## Creating a project
+A GUI scaffolding tool that let's you generate boilerplate for things like:
+- Generating dummy data, built-in faker.js support lmao
+- Scaffolding project details, stuff like package.json
+- Adding i18n functionality
+- PWA
 
-If you're seeing this, you've probably already done this step. Congrats!
+You can use the tool on its own, or use the pre-made templates or make your
+own template to make things easier!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Template(s) plan to add:
+- package.json
+- Minimal VSCode Theme Plugin
+- Random data
+- Config files that can be exported as either JavaScript or TypeScript files
+  - Scaffold to something like Tailwind, and other big framework plugins, etc.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## "But there are other tools like this one!"
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+I know; and I've only built it for my own and other peoples' convienience sakes;
+in addition, I've seen tools somewhat close to this but have horrible UI, and it
+intrigues me to make a better version of it.

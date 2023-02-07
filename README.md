@@ -13,7 +13,7 @@ A GUI scaffolding tool that let's you generate boilerplate for things like:
 You can use the tool on its own, or use the pre-made templates or make your
 own template to make things easier!
 
-Template(s) plan to add:
+Template(s) will be plan to add:
 
 - package.json
 - Minimal VSCode Theme Plugin

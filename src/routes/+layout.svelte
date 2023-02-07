@@ -1,7 +1,8 @@
 <script lang="ts">
 	import '../app.scss'
 	import { page } from '$app/stores'
-	import Navbar from '../components/Navbar.svelte'
+	import BaseNavbar from '../components/BaseNavbar.svelte'
+	import BaseFooter from '../components/BaseFooter.svelte'
 
 	const t = 'Yet another JSON Generator'
 	const d = 'Generate JSON shit'
@@ -19,5 +20,6 @@
 	<title>{t}</title>
 </svelte:head>
 
-<Navbar />
+<BaseNavbar />
 <slot />
+<BaseFooter />

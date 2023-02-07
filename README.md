@@ -1,6 +1,6 @@
 # YAJG
 
-Yet another JSON Generator
+Yet Another JSON Generator
 
 A GUI scaffolding tool that let's you generate boilerplate for things like:
 

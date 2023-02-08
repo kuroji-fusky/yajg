@@ -5,8 +5,8 @@
 	import '@fontsource/inter/700.css'
 
 	import { page } from '$app/stores'
-	import BaseNavbar from '../components/BaseNavbar.svelte'
-	import BaseFooter from '../components/BaseFooter.svelte'
+	import BaseNavbar from '$lib/BaseNavbar.svelte'
+	import BaseFooter from '$lib/BaseFooter.svelte'
 
 	const t = 'Yet another JSON Generator'
 	const d = 'Generate JSON shit'
@@ -34,6 +34,6 @@
 	}
 
 	:global(h1, h2, h3, h4) {
-    @apply font-inter;
+		@apply font-inter;
 	}
 </style>

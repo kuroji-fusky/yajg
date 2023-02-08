@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
-	import FieldBlock from '../components/FieldBlock.svelte'
+	import FieldBlock from '$lib/FieldBlock.svelte'
 
 	let output = []
 
@@ -31,9 +31,9 @@
 <main class="w-screen flex h-fit">
 	<div class="block-sidebar-container" bind:this={appContainer}>
 		<div class="overflow-hidden grid gap-2">
-      <FieldBlock />
-      <FieldBlock add />
-    </div>
+			<FieldBlock />
+			<FieldBlock add />
+		</div>
 		<div id="grip" bind:this={grippy} />
 	</div>
 	<div class="code-output-wrapper w-full">Code output here</div>
@@ -50,17 +50,17 @@
 	}
 
 	.block-sidebar-container {
-		@apply relative pr-2.5;
+		@apply relative pr-5;
 
 		width: var(--editor-sidebar-width, 320px);
 
 		#grip {
-			@apply -translate-x-1 w-1 bg-slate-500 absolute top-0 -right-1.5 bottom-0 cursor-ew-resize;
+			@apply -translate-x-1 w-0.5  bg-slate-500 absolute top-2 -right-1.5 bottom-2 cursor-ew-resize;
 			transition: color 200ms ease;
 
 			&:hover,
 			&:active {
-				@apply bg-sky-400 #{!important};
+				@apply bg-sky-400;
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 	let grippy: HTMLElement
 
 	onMount(() => {
-		function handleGrippy({ clientX }: MouseEvent) {
+		const handleGrippy = ({ clientX }: PointerEvent) => {
 			let pos = clientX
 			if (pos < 0) pos = 0
 
@@ -17,22 +17,22 @@
 			appContainer.style.setProperty('--editor-sidebar-width', mouseX)
 		}
 
-		grippy.onmousedown = () => {
-			window.addEventListener('mousemove', handleGrippy)
+		grippy.onpointerdown = () => {
+			window.addEventListener('pointermove', handleGrippy)
 		}
 
-		window.onmouseup = () => {
-			window.removeEventListener('mousemove', handleGrippy)
+		window.onpointerup = () => {
+			window.removeEventListener('pointermove', handleGrippy)
 		}
 	})
 </script>
 
-<div class="w-screen flex h-fit" bind:this={appContainer}>
-	<div class="block-sidebar-container">
-		<div class="overflow-hidden">Component blocks here</div>
+<div class="w-screen flex h-fit">
+	<div class="block-sidebar-container" bind:this={appContainer}>
+		<div class="overflow-hidden">PenisRandom</div>
 		<div id="grip" bind:this={grippy} />
 	</div>
-	<div class="code-output-wrapper">Code output here</div>
+	<div class="code-output-wrapper w-full">Code output here</div>
 </div>
 
 <style lang="scss">
@@ -42,7 +42,7 @@
 
 	.block-sidebar-container,
 	.code-output-wrapper {
-		@apply px-5 py-4;
+		@apply px-5 py-4 flex-shrink-0;
 	}
 
 	.block-sidebar-container {
@@ -52,6 +52,12 @@
 
 		#grip {
 			@apply w-1 bg-slate-500 absolute top-0 -right-1.5 bottom-0 cursor-ew-resize;
+			transition: color 200ms ease;
+
+			&:hover,
+			&:active {
+				@apply w-1.5 -right-2 bg-sky-400 #{!important};
+			}
 		}
 	}
 </style>

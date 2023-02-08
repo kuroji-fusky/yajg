@@ -1,5 +1,9 @@
 <script lang="ts">
 	import '../app.scss'
+	import '@fontsource/open-sans'
+	import '@fontsource/inter'
+	import '@fontsource/inter/700.css'
+
 	import { page } from '$app/stores'
 	import BaseNavbar from '../components/BaseNavbar.svelte'
 	import BaseFooter from '../components/BaseFooter.svelte'
@@ -23,3 +27,13 @@
 <BaseNavbar />
 <slot />
 <BaseFooter />
+
+<style lang="scss">
+	:global(body) {
+		@apply font-open-sans;
+	}
+
+	:global(h1, h2, h3, h4) {
+    @apply font-inter;
+	}
+</style>

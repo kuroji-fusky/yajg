@@ -1,5 +1,11 @@
+<script lang="ts">
+	import { jsonOutput } from '../stores'
+
+	let out = JSON.stringify($jsonOutput, undefined, 2)
+</script>
+
 <div class="code-output-wrapper w-full">
-	<pre>Code output here</pre>
+	<pre>{out}</pre>
 </div>
 
 <style lang="scss">

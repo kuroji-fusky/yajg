@@ -2,57 +2,57 @@
 	import { onMount } from 'svelte'
 	import FieldBlock from '$lib/FieldBlock.svelte'
 
-	let appContainer: HTMLElement
-	let grippy: HTMLElement
+	let appRoot: HTMLElement
+	let grip: HTMLElement
 
 	onMount(() => {
-		const bodyRoot = document.body
+		const body = document.body
 
 		const handleGrippy = ({ clientX }: PointerEvent) => {
-			const HEIGHT_LIMIT = 300
-
-			let pos = clientX
+      const HEIGHT_LIMIT = 300
+      
+      let pos: number = clientX
 			let maxEditorSize = window.innerWidth - HEIGHT_LIMIT
 
-			appContainer.style.paddingRight = '1.25rem'
+			appRoot.style.paddingRight = '1.25rem'
 
 			pos < HEIGHT_LIMIT
-				? appContainer.classList.add('transition-all')
-				: appContainer.classList.remove('transition-all')
+				? appRoot.classList.add('transition-all')
+				: appRoot.classList.remove('transition-all')
 
 			if (pos < HEIGHT_LIMIT / 2) {
 				pos = 0
-				appContainer.style.paddingRight = '0rem'
+				appRoot.style.paddingRight = '0rem'
 			} else {
 				if (pos < HEIGHT_LIMIT) pos = HEIGHT_LIMIT
 				if (pos > maxEditorSize) pos = maxEditorSize
-				appContainer.style.paddingRight = '1.25rem'
+				appRoot.style.paddingRight = '1.25rem'
 			}
 
 			let mouseX = `${pos}px`
-			appContainer.style.setProperty('--editor-sidebar-width', mouseX)
+			appRoot.style.setProperty('--editor-sidebar-width', mouseX)
 		}
 
 		window.onresize = () => handleGrippy
 
-		grippy.onpointerdown = () => {
+		grip.onpointerdown = () => {
 			window.addEventListener('pointermove', handleGrippy)
-			bodyRoot.style.cursor = 'ew-resize'
+			body.style.cursor = 'ew-resize'
 		}
 
 		window.onpointerup = () => {
 			window.removeEventListener('pointermove', handleGrippy)
-			bodyRoot.style.cursor = ''
+			body.style.cursor = ''
 		}
 	})
 </script>
 
-<div class="block-sidebar-container" bind:this={appContainer}>
+<div class="block-sidebar-container" bind:this={appRoot}>
 	<div class="overflow-hidden grid gap-2">
 		<FieldBlock />
 		<FieldBlock add />
 	</div>
-	<div id="grip" bind:this={grippy} />
+	<div id="grip" bind:this={grip} />
 </div>
 
 <style lang="scss">

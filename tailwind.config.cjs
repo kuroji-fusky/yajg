@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			inter: ['Inter', ...defaultTheme.fontFamily.sans],
-			'open-sans': ['Open Sans', ...defaultTheme.fontFamily.sans]
+			'open-sans': ['Open Sans', ...defaultTheme.fontFamily.sans],
+			'fira-mono': ['Fira Mono', ...defaultTheme.fontFamily.mono]
 		},
 		extend: {}
 	},

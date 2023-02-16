@@ -3,6 +3,8 @@
 	import '@fontsource/open-sans'
 	import '@fontsource/inter'
 	import '@fontsource/inter/700.css'
+	import '@fontsource/inter/900.css'
+	import '@fontsource/fira-mono'
 
 	import { page } from '$app/stores'
 	import BaseNavbar from '$lib/BaseNavbar.svelte'
@@ -35,5 +37,9 @@
 
 	:global(h1, h2, h3, h4) {
 		@apply font-inter;
+	}
+
+	:global(pre, code) {
+		@apply font-fira-mono;
 	}
 </style>
